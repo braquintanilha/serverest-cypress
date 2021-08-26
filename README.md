@@ -30,7 +30,7 @@ Nesse projeto foi utilizado um pattern muito comum em testes back-end, porém ex
 
 `integration` - arquivos de teste (separados em subpastas que representam os endpoints);
 
-`support/requests` - arquivos com os métodos de request. Todos esses arquivos são adicionados ao `index.js` e os métodos de request são `custom commands` do Cypress (tornam-se acessíveis através do objeto `cy` em qualquer contexto de teste do projeto);
+`support/requests` - arquivos com os métodos de request. Todos esses arquivos são adicionados ao `index.js` e os métodos de request são comandos customizados do Cypress (tornam-se acessíveis através do objeto `cy` em qualquer contexto de teste do projeto);
 
 `support/schemas` - arquivos de schema utilizados nos testes de contrato;
 
