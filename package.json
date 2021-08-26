@@ -1,0 +1,32 @@
+{
+  "name": "serverest-cypress",
+  "version": "1.0.0",
+  "description": "Projeto de estudo de testes back-end com Cypress para o simulador de loja virtual ServeRest API",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx standard",
+    "lint:fix": "npx standard --fix",
+    "test": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "standard": {
+    "globals": [
+      "before",
+      "beforeEach",
+      "context",
+      "cy",
+      "Cypress",
+      "describe",
+      "it",
+      "expect"
+    ]
+  },
+  "author": "Bruno Quintanilha <braquintanilha@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^8.2.0",
+    "faker": "^5.5.3",
+    "joi": "^17.4.2",
+    "standardjs": "^1.0.0-alpha"
+  }
+}
