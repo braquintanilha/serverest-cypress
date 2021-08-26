@@ -1,6 +1,6 @@
 # Hackernews Seven Cypress
 
-Olá, seja bem-vindo!! Esse é um projeto estudo de testes back-end com Cypress para o simulador de loja virtual ServeRest API. Para acessar a documentação do ServeRest basta acessar https://serverest.dev/#/
+Olá, seja bem-vindo!! Esse é um projeto estudo de testes back-end com Cypress para o simulador de loja virtual ServeRest API. Para acessar a documentação do ServeRest basta acessar https://serverest.dev/
 
 ## Pré-requisitos
 
