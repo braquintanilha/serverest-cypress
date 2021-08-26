@@ -34,7 +34,7 @@ Nesse projeto foi utilizado um pattern muito comum em testes back-end, porém ex
 
 `support/schemas` - arquivos de schema utilizados nos testes de contrato;
 
-`fixtures` - arquivos de payload utilizados nos testes (.json).
+`fixtures` - arquivos de payload (.json) utilizados nos testes.
 ___
 
 Se você tem alguma dúvida ou sugestão, entre em contato! Vamos bater um papo ☕
