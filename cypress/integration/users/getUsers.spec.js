@@ -2,9 +2,12 @@ describe('User tests - GET method', () => {
   const user = require('../../fixtures/users')
 
   it('get all users', () => {
+    const schema = require('../../support/schemas/users/getUsers.schema')
+
     cy.getAllUsers().should(response => {
       expect(response.status).to.be.equal(200)
       expect(response.body.quantidade).to.be.greaterThan(0)
+      return schema.validateAsync(response.body)
     })
   })
 
@@ -29,14 +32,6 @@ describe('User tests - GET method', () => {
         expect(response.body.password).to.be.equal(responseAllUsers.body.usuarios[0].password)
         expect(response.body.administrador).to.be.equal(responseAllUsers.body.usuarios[0].administrador)
       })
-    })
-  })
-
-  it('validate the get users response schema', () => {
-    const usersSchema = require('../../support/contracts/users.contract')
-
-    cy.getAllUsers().should(response => {
-      return usersSchema.validateAsync(response.body)
     })
   })
 })

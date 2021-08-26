@@ -1,4 +1,5 @@
 {
     "baseUrl": "https://serverest.dev/",
-    "video": false
+    "video": false,
+    "pluginsFile": false
 }

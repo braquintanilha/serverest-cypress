@@ -15,9 +15,12 @@ describe('Product tests - POST method', () => {
   })
 
   it('create a product', () => {
+    const schema = require('../../support/schemas/products/postProducts.schema')
+
     cy.postProduct(tokenAdmin, payload).should(response => {
       expect(response.status).to.be.equal(201)
       expect(response.body.message).to.be.equal('Cadastro realizado com sucesso')
+      return schema.validateAsync(response.body)
     })
   })
 

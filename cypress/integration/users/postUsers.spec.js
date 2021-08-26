@@ -7,10 +7,13 @@ describe('User tests - POST method', () => {
     administrador: `${faker.datatype.boolean()}`
   }
 
-  it('create a user', () => {
+  it('create a user and validade the response schema', () => {
+    const schema = require('../../support/schemas/users/postUsers.schema')
+
     cy.postUser(payload).should(response => {
       expect(response.status).to.be.equal(201)
       expect(response.body.message).to.be.equal('Cadastro realizado com sucesso')
+      schema.validateAsync(response.body)
     })
   })
 

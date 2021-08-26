@@ -1,6 +1,6 @@
 const Joi = require('joi')
 
-const usersSchema = Joi.object({
+const getUsersSchema = Joi.object({
   quantidade: Joi.number(),
   usuarios: Joi.array().items(
     Joi.object({
@@ -13,4 +13,4 @@ const usersSchema = Joi.object({
   )
 })
 
-export default usersSchema
+export default getUsersSchema

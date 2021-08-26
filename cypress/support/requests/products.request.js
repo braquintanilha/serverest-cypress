@@ -38,3 +38,15 @@ Cypress.Commands.add('deleteProduct', (token, id) => {
     return response
   })
 })
+
+Cypress.Commands.add('putProduct', (token, id, payload) => {
+  cy.request({
+    method: 'PUT',
+    url: `produtos/${id}`,
+    body: payload,
+    headers: { Authorization: token },
+    failOnStatusCode: false
+  }).then(response => {
+    return response
+  })
+})

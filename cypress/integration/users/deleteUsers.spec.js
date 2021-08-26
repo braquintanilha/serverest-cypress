@@ -14,12 +14,13 @@ describe('User tests - DELETE method', () => {
   })
 
   it('delete a user', () => {
-    cy.get('@responsePost').then(response => {
-      cy.deleteUser(response.body._id).as('responseDelete')
+    const schema = require('../../support/schemas/users/deleteUsers.schema')
 
-      cy.get('@responseDelete').should(response => {
+    cy.get('@responsePost').then(response => {
+      cy.deleteUser(response.body._id).should(response => {
         expect(response.status).to.be.equal(200)
         expect(response.body.message).to.be.equal('Registro excluído com sucesso')
+        return schema.validateAsync(response.body)
       })
     })
   })
