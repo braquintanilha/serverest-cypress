@@ -1,4 +1,4 @@
-# Hackernews Seven Cypress
+# ServeRest Cypress
 
 Olá, seja bem-vindo!! Esse é um projeto estudo de testes back-end com Cypress para o simulador de loja virtual ServeRest API. Para acessar a documentação do ServeRest basta acessar https://serverest.dev/
 
@@ -32,7 +32,7 @@ Nesse projeto foi utilizado um pattern muito comum em testes back-end, porém ex
 
 `support/requests` - arquivos com os métodos de request. Todos esses arquivos são adicionados ao `index.js` e os métodos de request são comandos customizados do Cypress (tornam-se acessíveis através do objeto `cy` em qualquer contexto de teste do projeto);
 
-`support/schemas` - arquivos de schema utilizados nos testes de contrato;
+`support/schemas` - arquivos de schema utilizados nos testes de schema JSON;
 
 `fixtures` - arquivos de payload (.json) utilizados nos testes.
 ___
