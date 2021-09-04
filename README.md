@@ -35,6 +35,16 @@ Nesse projeto foi utilizado um pattern muito comum em testes back-end, porém ex
 `support/schemas` - arquivos de schema utilizados nos testes de schema JSON;
 
 `fixtures` - arquivos de payload (.json) utilizados nos testes.
+
+## Integração contínua
+
+Foi implementada a integração contínua com GitHub Actions no projeto. O arquivo de configuração do CI é o seguinte: `.github/workflows/ci.yml`. Em todo push no branch `master` ou pull_request o pipeline é executado.
+
+Sobre os jobs:
+
+`eslint` - executa a ferramenta de análise estática de código ESLint. Caso algum erro seja encontrado, o build quebra e já retorna erro;
+
+`cypress-backend-tests` - executa todos os testes do projeto. Necessita do job anterior ter passado.
 ___
 
 Se você tem alguma dúvida ou sugestão, entre em contato! Vamos bater um papo ☕
