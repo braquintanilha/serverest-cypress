@@ -20,9 +20,9 @@ Uma vez que todas as dependências já estão listadas no arquivo `package.json`
 
 `npm cy:open`- executa o modo interativo do Cypress
 
-`npm lint` - executa a ferramenta de análise estática de código Lint e mostra o relatório de inconsistências
+`npm lint` - executa a ferramenta de análise estática de código ESLint e mostra o relatório de inconsistências
 
-`npm lint:fix` - executa a ferramenta de análise estática de código Lint e corrige as inconsistências
+`npm lint:fix` - executa a ferramenta de análise estática de código ESLint e corrige as inconsistências
 
 ## Arquitetura e design pattern
 

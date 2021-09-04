@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Products tests - DELETE method', () => {
   let tokenAdmin
   const faker = require('faker')

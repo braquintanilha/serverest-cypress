@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Product tests - PUT method', () => {
   let tokenAdmin
   const faker = require('faker')

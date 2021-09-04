@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Products tests - GET method', () => {
   const product = require('../../fixtures/products')
 
