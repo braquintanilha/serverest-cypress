@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 const faker = require('faker')
 
 describe('User tests - DELETE method', () => {

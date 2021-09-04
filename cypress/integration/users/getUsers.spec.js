@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('User tests - GET method', () => {
   const user = require('../../fixtures/users')
 

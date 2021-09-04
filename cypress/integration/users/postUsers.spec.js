@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('User tests - POST method', () => {
   const faker = require('faker')
   const payload = {

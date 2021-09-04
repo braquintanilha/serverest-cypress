@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Login tests - POST method', () => {
   const user = require('../../fixtures/users')
 

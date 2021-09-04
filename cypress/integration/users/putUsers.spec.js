@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('User tests - PUT method', () => {
   const faker = require('faker')
   const payload = {
