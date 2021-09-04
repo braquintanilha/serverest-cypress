@@ -15,7 +15,7 @@ jobs:
       run: npm install
     - name: Run ESLint
       run: npm run lint
-  cypress-tests-desktop:
+  cypress-backend-tests:
     needs: eslint
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
