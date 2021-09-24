@@ -15,7 +15,7 @@ jobs:
       run: npm install
     - name: Run ESLint
       run: npm run lint
-  cypress-backend-tests:
+  post-login-tests:
     needs: eslint
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
@@ -23,7 +23,104 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Run back-end tests
+      - name: Run POST method tests on Login endpoint
         uses: cypress-io/github-action@v2
         with:
-          command: npm test
+          command: npm test:postLogin
+  delete-products-tests:
+    needs: eslint
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run DELETE method tests on Products endpoint
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm test:deleteProducts
+  get-products-tests:
+    needs: eslint
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run GET method tests on Products endpoint
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm test:getProducts
+  post-products-tests:
+    needs: eslint
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run POST method tests on Products endpoint
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm test:postProducts
+  put-products-tests:
+    needs: eslint
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run PUT method tests on Products endpoint
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm test:putProducts
+  delete-users-tests:
+    needs: eslint
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run DELETE method tests on Users endpoint
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm test:deleteUsers
+  get-users-tests:
+    needs: eslint
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run GET method tests on Users endpoint
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm test:getUsers
+  post-users-tests:
+    needs: eslint
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run POST method tests on Users endpoint
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm test:postUsers
+  put-users-tests:
+    needs: eslint
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run PUT method tests on Users endpoint
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm test:putUsers
+    
