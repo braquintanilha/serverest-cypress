@@ -26,7 +26,7 @@ jobs:
       - name: Run POST method tests on Login endpoint
         uses: cypress-io/github-action@v2
         with:
-          command: npm test:postlogin
+          command: npm run test:postLogin
   delete-products-tests:
     needs: eslint
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
       - name: Run DELETE method tests on Products endpoint
         uses: cypress-io/github-action@v2
         with:
-          command: npm test:deleteproducts
+          command: npm run test:deleteProducts
   get-products-tests:
     needs: eslint
     runs-on: ubuntu-latest
@@ -50,7 +50,7 @@ jobs:
       - name: Run GET method tests on Products endpoint
         uses: cypress-io/github-action@v2
         with:
-          command: npm test:getproducts
+          command: npm run test:getProducts
   post-products-tests:
     needs: eslint
     runs-on: ubuntu-latest
@@ -62,7 +62,7 @@ jobs:
       - name: Run POST method tests on Products endpoint
         uses: cypress-io/github-action@v2
         with:
-          command: npm test:postproducts
+          command: npm run test:postProducts
   put-products-tests:
     needs: eslint
     runs-on: ubuntu-latest
@@ -74,7 +74,7 @@ jobs:
       - name: Run PUT method tests on Products endpoint
         uses: cypress-io/github-action@v2
         with:
-          command: npm test:putproducts
+          command: npm run test:putProducts
   delete-users-tests:
     needs: eslint
     runs-on: ubuntu-latest
@@ -86,7 +86,7 @@ jobs:
       - name: Run DELETE method tests on Users endpoint
         uses: cypress-io/github-action@v2
         with:
-          command: npm test:deleteusers
+          command: npm run test:deleteUsers
   get-users-tests:
     needs: eslint
     runs-on: ubuntu-latest
@@ -98,7 +98,7 @@ jobs:
       - name: Run GET method tests on Users endpoint
         uses: cypress-io/github-action@v2
         with:
-          command: npm test:getusers
+          command: npm run test:getUsers
   post-users-tests:
     needs: eslint
     runs-on: ubuntu-latest
@@ -110,7 +110,7 @@ jobs:
       - name: Run POST method tests on Users endpoint
         uses: cypress-io/github-action@v2
         with:
-          command: npm test:postusers
+          command: npm run test:postUsers
   put-users-tests:
     needs: eslint
     runs-on: ubuntu-latest
@@ -122,5 +122,5 @@ jobs:
       - name: Run PUT method tests on Users endpoint
         uses: cypress-io/github-action@v2
         with:
-          command: npm test:putusers
+          command: npm run test:putUsers
     
