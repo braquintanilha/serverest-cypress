@@ -38,13 +38,13 @@ Nesse projeto foi utilizado um pattern muito comum em testes back-end, porém ex
 
 ## Integração contínua
 
-Foi implementada a integração contínua com GitHub Actions no projeto. O arquivo de configuração do CI é o seguinte: `.github/workflows/ci.yml`. Em todo push no branch `master` ou pull_request o pipeline é executado.
+Foi implementada a integração contínua com GitHub Actions no projeto. O arquivo de configuração do CI é o seguinte: `.github/workflows/ci.yml`. Em todo push ou pull_request no branch `master` o pipeline é executado. Da forma como foi configurado, o job `eslint` é executado como pré-condição dos testes e, caso execute sem falhas, todos os jobs de teste são exeutados de forma paralela. Cada job de teste executa um arquivo de teste do projeto (.spec.js)
 
 Sobre os jobs:
 
 `eslint` - executa a ferramenta de análise estática de código ESLint. Caso algum erro seja encontrado, o build quebra e já retorna erro;
 
-`cypress-backend-tests` - executa todos os testes do projeto. Necessita do job anterior ter passado.
+`post-login-tests` - executa o script NPM 'test:postLogin' que, por sua vez, executa os testes do arquivo 'postLogin.spec.js'. A mesma lógica vale para todos os outros jobs de teste.
 ___
 
 Se você tem alguma dúvida ou sugestão, entre em contato! Vamos bater um papo ☕
