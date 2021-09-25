@@ -5,6 +5,7 @@ describe('Login tests - POST method', () => {
 
   it('succesfully login', () => {
     const schema = require('../../support/schemas/login/postLogin.schema')
+    cy.postUser(user.valid)
 
     cy.login(user.valid.email, user.valid.password).should(response => {
       expect(response.status).to.be.equal(200)

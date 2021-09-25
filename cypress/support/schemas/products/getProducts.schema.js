@@ -8,6 +8,7 @@ const getProductsSchema = Joi.object({
       preco: Joi.number(),
       descricao: Joi.string(),
       quantidade: Joi.number(),
+      imagem: Joi.string(),
       _id: Joi.string()
     })
   )
