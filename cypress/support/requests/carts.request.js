@@ -1,5 +1,5 @@
 Cypress.Commands.add('postCart', (token, payload) => {
-  cy.request({
+  cy.api({
     method: 'POST',
     url: 'carrinhos',
     headers: { Authorization: token },

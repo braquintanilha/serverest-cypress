@@ -1,5 +1,5 @@
 Cypress.Commands.add('login', (email, password) => {
-  cy.request({
+  cy.api({
     method: 'POST',
     url: 'login',
     body: {

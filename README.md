@@ -1,6 +1,6 @@
-# Hackernews Seven Cypress
+# ServeRest Cypress
 
-Olá, seja bem-vindo!! Esse é um projeto estudo de testes back-end com Cypress para o simulador de loja virtual ServeRest API. Para acessar a documentação do ServeRest basta acessar https://serverest.dev/#/
+Olá, seja bem-vindo!! Esse é um projeto estudo de testes back-end com Cypress para o simulador de loja virtual ServeRest API. Para acessar a documentação do ServeRest basta acessar https://serverest.dev/
 
 ## Pré-requisitos
 
@@ -30,11 +30,21 @@ Nesse projeto foi utilizado um pattern muito comum em testes back-end, porém ex
 
 `integration` - arquivos de teste (separados em subpastas que representam os endpoints);
 
-`support/requests` - arquivos com os métodos de request. Todos esses arquivos são adicionados ao `index.js` e os métodos de request são `custom commands` do Cypress (tornam-se acessíveis através do objeto `cy` em qualquer contexto de teste do projeto);
+`support/requests` - arquivos com os métodos de request. Todos esses arquivos são adicionados ao `index.js` e os métodos de request são comandos customizados do Cypress (tornam-se acessíveis através do objeto `cy` em qualquer contexto de teste do projeto);
 
-`support/schemas` - arquivos de schema utilizados nos testes de contrato;
+`support/schemas` - arquivos de schema utilizados nos testes de schema JSON;
 
-`fixtures` - arquivos de payload utilizados nos testes (.json).
+`fixtures` - arquivos de payload (.json) utilizados nos testes.
+
+## Integração contínua
+
+Foi implementada a integração contínua com GitHub Actions no projeto. O arquivo de configuração do CI é o seguinte: `.github/workflows/ci.yml`. Em todo push ou pull_request no branch `master` o pipeline é executado. Da forma como foi configurado, o job `eslint` é executado como pré-condição dos testes e, caso execute sem falhas, todos os jobs de teste são exeutados de forma paralela. Cada job de teste executa um arquivo de teste do projeto (.spec.js)
+
+Sobre os jobs:
+
+`eslint` - executa a ferramenta de análise estática de código ESLint. Caso algum erro seja encontrado, o build quebra e já retorna erro;
+
+`post-login-tests` - executa o script NPM 'test:postLogin' que, por sua vez, executa os testes do arquivo 'postLogin.spec.js'. A mesma lógica vale para todos os outros jobs de teste.
 ___
 
 Se você tem alguma dúvida ou sugestão, entre em contato! Vamos bater um papo ☕
