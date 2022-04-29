@@ -1,5 +1,5 @@
 Cypress.Commands.add('getAllProducts', () => {
-  cy.request({
+  cy.api({
     method: 'GET',
     url: 'produtos'
   }).then(response => {
@@ -8,7 +8,7 @@ Cypress.Commands.add('getAllProducts', () => {
 })
 
 Cypress.Commands.add('getProductById', id => {
-  cy.request({
+  cy.api({
     method: 'GET',
     url: `produtos/${id}`
   }).then(response => {
@@ -17,7 +17,7 @@ Cypress.Commands.add('getProductById', id => {
 })
 
 Cypress.Commands.add('postProduct', (token, payload) => {
-  cy.request({
+  cy.api({
     method: 'POST',
     url: 'produtos',
     headers: { Authorization: token },
@@ -29,7 +29,7 @@ Cypress.Commands.add('postProduct', (token, payload) => {
 })
 
 Cypress.Commands.add('deleteProduct', (token, id) => {
-  cy.request({
+  cy.api({
     method: 'DELETE',
     url: `produtos/${id}`,
     headers: { Authorization: token },
@@ -40,7 +40,7 @@ Cypress.Commands.add('deleteProduct', (token, id) => {
 })
 
 Cypress.Commands.add('putProduct', (token, id, payload) => {
-  cy.request({
+  cy.api({
     method: 'PUT',
     url: `produtos/${id}`,
     body: payload,
