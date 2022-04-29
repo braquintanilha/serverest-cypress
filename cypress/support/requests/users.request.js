@@ -1,5 +1,5 @@
 Cypress.Commands.add('getAllUsers', () => {
-  cy.request({
+  cy.api({
     method: 'GET',
     url: 'usuarios'
   }).then(response => {
@@ -8,7 +8,7 @@ Cypress.Commands.add('getAllUsers', () => {
 })
 
 Cypress.Commands.add('getUserById', id => {
-  cy.request({
+  cy.api({
     method: 'GET',
     url: `usuarios/${id}`
   }).then(response => {
@@ -17,7 +17,7 @@ Cypress.Commands.add('getUserById', id => {
 })
 
 Cypress.Commands.add('postUser', payload => {
-  cy.request({
+  cy.api({
     method: 'POST',
     url: 'usuarios',
     body: payload,
@@ -28,7 +28,7 @@ Cypress.Commands.add('postUser', payload => {
 })
 
 Cypress.Commands.add('deleteUser', id => {
-  cy.request({
+  cy.api({
     method: 'DELETE',
     url: `usuarios/${id}`,
     failOnStatusCode: false
@@ -38,7 +38,7 @@ Cypress.Commands.add('deleteUser', id => {
 })
 
 Cypress.Commands.add('putUser', (id, payload) => {
-  cy.request({
+  cy.api({
     method: 'PUT',
     url: `usuarios/${id}`,
     body: payload,
