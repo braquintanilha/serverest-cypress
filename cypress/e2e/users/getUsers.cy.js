@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 describe('User tests - GET method', () => {
-  const user = require('../../fixtures/users')
 
   it('get all users', () => {
     const schema = require('../../support/schemas/users/getUsers.schema')
