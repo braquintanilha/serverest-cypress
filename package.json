@@ -21,8 +21,8 @@
     "author": "Bruno Quintanilha <braquintanilha@gmail.com>",
     "license": "MIT",
     "devDependencies": {
+        "@bahmutov/cy-api": "^2.2.1",
         "cypress": "^10.10.0",
-        "cypress-plugin-api": "^1.4.0",
         "eslint": "^7.32.0",
         "eslint-plugin-cypress": "^2.11.3",
         "faker": "^5.5.3",

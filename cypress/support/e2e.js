@@ -1,5 +1,5 @@
 // usually cypress/support/index.js
-import 'cypress-plugin-api'
+import '@bahmutov/cy-api'
 
 import './requests/login.request'
 import './requests/users.request'
